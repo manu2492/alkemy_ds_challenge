@@ -2,17 +2,14 @@ import logging
 from data import main_table, categories_table, cinema_table
 from datetime import datetime
 from sqlalchemy import MetaData, Integer, Text
-
+from config import USER, PASSWORD, DB_NAME
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s: %(levelname)s - %(message)s')
 
 
 #Database connection
-"""
-you have to change the connection string with your username, password and database name
-"""
 logging.info('Conectando con PostgreSQL')
-engine = 'postgresql://user:pass@localhost:5432/Alkemy'
+engine = "postgresql://"+USER+":"+PASSWORD+"@localhost:5432/"+DB_NAME
 
 
 #Uploading data to database
