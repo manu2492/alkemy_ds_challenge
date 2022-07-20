@@ -18,7 +18,7 @@ to_sql() method allows you to write a DataFrame to a SQL table.
 documentation: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_sql.html
 """
 try:
-    logging.info('Uploading main_table')
+    logging.info('Connecting to postgresql')
     main_table.to_sql(
         'main_table',
         engine,
@@ -54,7 +54,7 @@ try:
             "Categorías por provincia": Integer,
         })
 
-    logging.info('Uloading cinema_table')
+    logging.info('Uploading cinema_table')
     cinema_table.to_sql(
         'cinema_table',
         engine,
