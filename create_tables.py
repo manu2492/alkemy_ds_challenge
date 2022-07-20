@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s: %(levelname)s - %(m
 
 
 #Database connection
-logging.info('Conectando con PostgreSQL')
+logging.info('Connecting to postgresql')
 engine = "postgresql://"+USER+":"+PASSWORD+"@localhost:5432/"+DB_NAME
 
 
@@ -18,7 +18,7 @@ to_sql() method allows you to write a DataFrame to a SQL table.
 documentation: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_sql.html
 """
 try:
-    logging.info('Connecting to postgresql')
+    logging.info('Uploading main_table')
     main_table.to_sql(
         'main_table',
         engine,
